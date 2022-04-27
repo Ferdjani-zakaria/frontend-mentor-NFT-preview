@@ -1,0 +1,125 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap");
+
+:root {
+  --soft-blue: hsl(215, 51%, 70%);
+  --cyan: hsl(178, 100%, 50%);
+  --main-bg-dark-blue: hsl(217, 54%, 11%);
+  --card-bg-dark-blue: hsl(216, 50%, 16%);
+  --line-dark-blue: hsl(215, 32%, 27%);
+  --white: hsl(0, 0%, 100%);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-size: 18px;
+  font-family: "Outfit", "sans-serif";
+  background-color: var(--main-bg-dark-blue);
+}
+
+img {
+  max-width: 100%;
+  vertical-align: middle;
+}
+p {
+  color: var(--soft-blue);
+  font-weight: 300;
+}
+
+span {
+  color: var(--white);
+  cursor: pointer;
+}
+
+.container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: min(80%, 23em);
+  margin: 0 auto;
+}
+
+.container__card {
+  background-color: var(--card-bg-dark-blue);
+  border-radius: 1em;
+  padding: 1em 0;
+}
+.container__card h2 {
+  color: var(--white);
+  font-weight: 600;
+  font-size: 1.25em;
+  cursor: pointer;
+}
+
+.container__card__image {
+  position: relative;
+  margin: 0 auto;
+  width: 85%;
+  border-radius: 0.5em;
+  cursor: pointer;
+  background-color: var(--white);
+}
+.filter {
+  position: absolute;
+  top: 43%;
+  left: 42%;
+  display: none;
+}
+
+.card-image {
+  border-radius: 0.4em;
+  vertical-align: middle;
+  cursor: pointer;
+}
+.card-image:hover {
+  opacity: 0.45;
+  mix-blend-mode: multiply;
+}
+
+.card-image:hover + .filter {
+  display: block;
+}
+
+.container__card__details {
+  margin: 0 auto;
+  width: 85%;
+}
+
+.container__card__details > p {
+  margin: 0;
+}
+
+.container__card__details__profil-img {
+  max-height: 2em;
+  border: 1px solid var(--white);
+  border-radius: 50%;
+}
+
+.ethereum {
+  color: var(--cyan);
+  font-weight: 400;
+}
+
+.f-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.f-left {
+  justify-content: flex-start;
+  gap: 1em;
+}
+
+.v-line {
+  height: 1px;
+  background-color: var(--line-dark-blue);
+}
