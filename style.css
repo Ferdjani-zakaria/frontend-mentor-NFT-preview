@@ -37,19 +37,26 @@ span {
 }
 
 .container {
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  max-width: min(80%, 23em);
-  margin: 0 auto;
+  max-width: min(80%, 20em);
+  margin: 0em auto;
+}
+
+.container-to-center {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .container__card {
   background-color: var(--card-bg-dark-blue);
   border-radius: 1em;
   padding: 1em 0;
+  min-height: 100%;
 }
 .container__card h2 {
   color: var(--white);
